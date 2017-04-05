@@ -1,10 +1,10 @@
 const uniq = arr => {
   const hashMap = []
-  arr.forEach( x => {
+  arr.forEach(x => {
     if (!hashMap[x])
       hashMap[x] = x
   })
-  return hashMap.splice(1,hashMap.length)
+  return hashMap.splice(1, hashMap.length)
 }
 
 const sort = arr => {
@@ -12,11 +12,11 @@ const sort = arr => {
   if (isString)
     return arr.sort()
   else
-     return arr.sort((a,b) => a - b)
+    return arr.sort((a, b) => a - b)
 }
 
 const duplicates = arr => {
-  return arr.filter((x,i,instanceArr) => {
+  return arr.filter((x, i, instanceArr) => {
     return instanceArr.filter(y => x === y).length > 1
   })
 }
