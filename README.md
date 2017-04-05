@@ -1,6 +1,9 @@
 # rdash
 The lodash extension
 
+## To build
+$ webpack
+
 ## To use
     const { uniq } = require('./rdash')
 
@@ -23,5 +26,4 @@ The lodash extension
     console.log(result)
 
 
-## To build
-$ webpack
+
