@@ -1,5 +1,5 @@
-const { sort } = require('./rdash')
+const { sort, duplicates } = require('./rdash')
 
-var result = sort(['abz','abe','abc'])
+var result = duplicates([1,1,2,2,3,4,5])
 
-document.body.innerHTML = result
+console.log(result)

@@ -44,11 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const { sort } = __webpack_require__(1)
+	const { sort, duplicates } = __webpack_require__(1)
 
-	var result = sort(['abz','abe','abc'])
+	var result = duplicates([1,1,2,2,3,4,5])
 
-	document.body.innerHTML = result
+	console.log(result)
 
 /***/ },
 /* 1 */
@@ -71,9 +71,16 @@
 	     return arr.sort((a,b) => a - b)
 	}
 
+	const duplicates = arr => {
+	  return arr.filter((x,i,instanceArr) => {
+	    return instanceArr.filter(y => x === y).length > 1
+	  })
+	}
+
 	module.exports = {
 	  uniq,
-	  sort
+	  sort,
+	  duplicates
 	}
 
 /***/ }
