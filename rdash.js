@@ -16,10 +16,13 @@ const sort = arr => {
 }
 
 const duplicates = arr => {
-  
+  return arr.filter((x,i,instanceArr) => {
+    return instanceArr.filter(y => x === y).length > 1
+  })
 }
 
 module.exports = {
   uniq,
-  sort
+  sort,
+  duplicates
 }
