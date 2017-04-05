@@ -25,7 +25,7 @@ The lodash extension
 ## duplicates()
     const { duplicates } = require('./rdash')
 
-    const result = uniq([1,1,2,2,3,4,5])
+    const result = duplicates([1,1,2,2,3,4,5])
 
     console.log(result)
 
