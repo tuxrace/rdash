@@ -8,6 +8,13 @@ The lodash extension
 
     console.log(result)
 
+## duplicates()
+    const { duplicates } = require('./rdash')
+
+    const result = duplicates([1,1,2,2,3,4,5])
+
+    console.log(result)
+
 ## sort()
     const { sort } = require('./rdash')
 
@@ -21,14 +28,6 @@ The lodash extension
     const result = uniq([1,1,2,2,3,4,5])
 
     console.log(result)
-
-## duplicates()
-    const { duplicates } = require('./rdash')
-
-    const result = duplicates([1,1,2,2,3,4,5])
-
-    console.log(result)
-
 
 ## To build
 $ webpack
