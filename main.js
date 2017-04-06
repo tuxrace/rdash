@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const { sort, duplicates } = __webpack_require__(1)
+	const { sort, duplicates, contains, uniq } = __webpack_require__(1)
 
 	var result = duplicates([1,1,2,2,3,4,5])
 
@@ -54,13 +54,14 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	const uniq = arr => {
-	  const hashMap = []
-	  arr.forEach( x => {
-	    if (!hashMap[x])
-	      hashMap[x] = x
+	const contains = (arr, item) => {
+	  return arr.some(x => x === item)
+	}
+
+	const duplicates = arr => {
+	  return arr.filter((x, i, instanceArr) => {
+	    return instanceArr.filter(y => x === y).length > 1
 	  })
-	  return hashMap.splice(1,hashMap.length)
 	}
 
 	const sort = arr => {
@@ -68,20 +69,25 @@
 	  if (isString)
 	    return arr.sort()
 	  else
-	     return arr.sort((a,b) => a - b)
+	    return arr.sort((a, b) => a - b)
 	}
 
-	const duplicates = arr => {
-	  return arr.filter((x,i,instanceArr) => {
-	    return instanceArr.filter(y => x === y).length > 1
+	const uniq = arr => {
+	  const hashMap = []
+	  arr.forEach(x => {
+	    if (!hashMap.some(y => y === x))
+	      hashMap.push(x)
 	  })
+	  return hashMap
 	}
 
 	module.exports = {
+	  contains,
 	  uniq,
 	  sort,
 	  duplicates
 	}
+
 
 /***/ }
 /******/ ]);

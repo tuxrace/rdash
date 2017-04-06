@@ -1,4 +1,4 @@
-const { sort, duplicates } = require('./rdash')
+const { sort, duplicates, contains, uniq } = require('./rdash')
 
 var result = duplicates([1,1,2,2,3,4,5])
 
