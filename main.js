@@ -46,7 +46,7 @@
 
 	const { sort, duplicates, contains, uniq } = __webpack_require__(1)
 
-	var result = uniq([1,1,2,2,3,4,5])
+	var result = duplicates([1,1,2,2,3,4,5])
 
 	console.log(result)
 
@@ -87,6 +87,7 @@
 	  sort,
 	  duplicates
 	}
+
 
 /***/ }
 /******/ ]);
