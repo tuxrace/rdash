@@ -27,6 +27,19 @@ const groupBy = (arr, item) => {
   }, [])
 }
 
+const groupBySumAt = (arr, byKey, sumAt) => {
+  return arr.reduce((a, c) => {
+    if (!a.some(x => x[byKey] === c[byKey])) {
+      a.push(c)
+    } else {
+      const index = a.findIndex(x => x[byKey] === c[byKey])
+      const latest = a[index]
+      a[index][sumAt] = c[sumAt] + latest[sumAt]
+    }
+    return a
+  }, [])
+}
+
 const sort = arr => {
   const isString = arr.every(x => (typeof x) == "string")
   if (isString)
@@ -48,6 +61,7 @@ module.exports = {
   contains,
   cumSum,
   groupBy,
+  groupBySumAt,
   uniq,
   sort,
   duplicates
