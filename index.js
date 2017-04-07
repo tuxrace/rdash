@@ -1,10 +1,13 @@
-const { sort, duplicates, contains, uniq, groupBy, cumSum } = require('./rdash')
+const { sort, duplicates, contains, uniq, groupBy, cumSum, 
+  groupBySumAt } = require('./rdash')
 
 var items = [
   {key:'key1', value : 10},
   {key:'key2', value : 20},
-  {key:'key1', value : 30}
+  {key:'key1', value : 30},
+  {key:'key3', value : 10}
 ]
-var result = groupBy([2,3,7,1,4])
+
+var result = groupBySumAt(items,'key','value')
 
 console.log(result)
