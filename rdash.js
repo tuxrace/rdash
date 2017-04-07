@@ -24,7 +24,7 @@ const groupBy = (arr, item) => {
       a.push(c)
     }
     return a
-  })
+  }, [])
 }
 
 const sort = arr => {
@@ -46,6 +46,7 @@ const uniq = arr => {
 
 module.exports = {
   contains,
+  cumSum,
   groupBy,
   uniq,
   sort,
