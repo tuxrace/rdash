@@ -5,6 +5,6 @@ var items = [
   {key:'key2', value : 20},
   {key:'key1', value : 30}
 ]
-var result = groupBy(items, 'key')
+var result = groupBy([2,3,7,1,4])
 
 console.log(result)
