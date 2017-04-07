@@ -32,8 +32,8 @@ const groupBySumAt = (arr, byKey, sumAt) => {
     if (!a.some(x => x[byKey] === c[byKey])) {
       a.push(c)
     } else {
-      index = a.findIndex(x => x[byKey] === c[byKey])
-      latest = a[index]
+      const index = a.findIndex(x => x[byKey] === c[byKey])
+      const latest = a[index]
       a[index][sumAt] = c[sumAt] + latest[sumAt]
     }
     return a
