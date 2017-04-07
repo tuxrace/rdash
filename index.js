@@ -1,5 +1,10 @@
-const { sort, duplicates, contains, uniq } = require('./rdash')
+const { sort, duplicates, contains, uniq, groupBy } = require('./rdash')
 
-var result = duplicates([1,1,2,2,3,4,5])
+var items = [
+  {key:'key1', value : 10},
+  {key:'key2', value : 20},
+  {key:'key1', value : 30}
+]
+var result = groupBy(items,'key')
 
 console.log(result)

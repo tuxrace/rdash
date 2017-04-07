@@ -13,6 +13,11 @@ $ webpack
     Output:
     1,2,3,4,5
 
+## cumSum()
+    const { cumSum } = require('./rdash')
+    const result = cumSum([1,2,3,4,5])
+    console.log(result)
+
 ## sort()
     const { sort } = require('./rdash')
     const result = sort([10,8,2,1,7,5])

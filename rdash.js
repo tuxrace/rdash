@@ -2,9 +2,28 @@ const contains = (arr, item) => {
   return arr.some(x => x === item)
 }
 
+const cumSum = arr => {
+  return arr.reduce((a, c, i, instanceArr) => {
+    if (a.length > 0)
+      a.push(c + a[a.length - 1])
+    else
+      a.push(c)
+    return a
+  }, [])
+}
+
 const duplicates = arr => {
   return arr.filter((x, i, instanceArr) => {
     return instanceArr.filter(y => x === y).length > 1
+  })
+}
+
+const groupBy = (arr, item) => {
+  return arr.reduce((a, c, i, instanceArr) => {
+    if (!a.some(x => x[item] === c[item])) {
+      a.push(c)
+    }
+    return a
   })
 }
 
@@ -27,6 +46,7 @@ const uniq = arr => {
 
 module.exports = {
   contains,
+  groupBy,
   uniq,
   sort,
   duplicates
