@@ -1,5 +1,5 @@
 # rdash
-The lodash extension
+The recreational lodash
 
 ## To build
 If you don't have a webpack in your local you need to install it first : $ npm install --save-dev webpack. Once installed you can now run the command    
@@ -12,6 +12,11 @@ $ webpack
 
     Output:
     1,2,3,4,5
+
+## contains()
+    const { contains } = require('./rdash')
+    const result = contains([1,2,3,4,5], 3)
+    console.log(result)
 
 ## cumSum()
     const { cumSum } = require('./rdash')
