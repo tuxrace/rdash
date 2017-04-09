@@ -18,6 +18,13 @@ const duplicates = arr => {
   })
 }
 
+const factorial = n => {
+  if (n === 1)
+    return n
+  else
+    return n * factorial(n - 1)
+}
+
 const groupBy = (arr, item) => {
   return arr.reduce((a, c, i, instanceArr) => {
     if (!a.some(x => x[item] === c[item])) {
@@ -60,9 +67,10 @@ const uniq = arr => {
 module.exports = {
   contains,
   cumSum,
+  duplicates,
+  factorial,
   groupBy,
   groupBySumAt,
   uniq,
-  sort,
-  duplicates
+  sort
 }
