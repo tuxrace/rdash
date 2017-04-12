@@ -47,6 +47,15 @@ const groupBySumAt = (arr, byKey, sumAt) => {
   }, [])
 }
 
+const isPrime = (n, acc = 2) => { 
+  if (n === acc || n === 1)
+    return true
+  if (n % acc !== 0)
+    return isPrime(n, acc + 1)
+  else
+    return false
+}
+
 const sort = arr => {
   const isString = arr.every(x => (typeof x) == "string")
   if (isString)
