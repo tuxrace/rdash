@@ -80,6 +80,7 @@ module.exports = {
   factorial,
   groupBy,
   groupBySumAt,
+  isPrime,
   uniq,
   sort
 }
