@@ -15,6 +15,7 @@ Next, you need to install a web server to serve our app. We suggest to use simpl
 
 ## To test
 ***$ npm test***    
+All test should be 100% passed.    
 
 ## To use
     const { uniq } = require('./rdash')
