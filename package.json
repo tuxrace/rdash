@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^3.2.0",
     "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
   }
 }
