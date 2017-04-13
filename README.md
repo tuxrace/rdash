@@ -1,13 +1,20 @@
 # rdash
 The recreational lodash
 
+## To install
+Run the npm install command first, it will install in your local machine all the required modules.    
+***$ npm install***    
+
 ## To build
-If you don't have a webpack in your local you need to install it first: ***$ npm install -g webpack***.    
+If you don't have a webpack in your local you need to install it: ***$ npm install -g webpack***.    
 Once installed you can now run the command:    
 ***$ webpack***    
 Next, you need to install a web server to serve our app. We suggest to use simplehttpserver.    
 ***$ npm install simplehttpserver -g***    
 ***$ simplehttpserver .***    
+
+## To test
+***$ npm test***    
 
 ## To use
     const { uniq } = require('./rdash')
