@@ -18,6 +18,13 @@ const duplicates = arr => {
   })
 }
 
+const factorial = n => {
+  if (n === 1)
+    return n
+  else
+    return n * factorial(n - 1)
+}
+
 const groupBy = (arr, item) => {
   return arr.reduce((a, c, i, instanceArr) => {
     if (!a.some(x => x[item] === c[item])) {
@@ -40,6 +47,15 @@ const groupBySumAt = (arr, byKey, sumAt) => {
   }, [])
 }
 
+const isPrime = (n, acc = 2) => { 
+  if (n === acc || n === 1)
+    return true
+  if (n % acc !== 0)
+    return isPrime(n, acc + 1)
+  else
+    return false
+}
+
 const sort = arr => {
   const isString = arr.every(x => (typeof x) == "string")
   if (isString)
@@ -60,9 +76,11 @@ const uniq = arr => {
 module.exports = {
   contains,
   cumSum,
+  duplicates,
+  factorial,
   groupBy,
   groupBySumAt,
+  isPrime,
   uniq,
-  sort,
-  duplicates
+  sort
 }
