@@ -1,5 +1,5 @@
 const contains = (arr, item) => {
-  return arr.some(x => x === item)
+  return (arr.indexOf(item)>=0) ? true : false
 }
 
 const cumSum = arr => {
