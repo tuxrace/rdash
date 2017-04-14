@@ -31,4 +31,17 @@ describe('rdash', function() {
     done();
   });
 
+  it('test groupBySumAt() function', function(done) {
+    var items = [
+      {key:'key1', value:10},
+      {key:'key2', value:20},
+      {key:'key3', value:30},
+      {key:'key1', value:40}
+    ];
+    var result = groupBySumAt(items,'key','value');
+    var data = [{"key":"key1","value":50},{"key":"key2","value":20},{"key":"key3","value":30}];
+    expect(result).to.deep.equal(data);
+    done();
+  });
+
 });
