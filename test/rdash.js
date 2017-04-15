@@ -56,4 +56,13 @@ describe('rdash', function() {
     done();
   });
 
+  it('test factorial() function', function(done) {
+    var ary = [];
+    for(i=1;i<5;i++){
+      ary.push(factorial(i));
+    }
+    expect(ary).to.deep.equal([1,2,6,24]);
+    done();
+  });
+
 });
