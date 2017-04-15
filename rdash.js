@@ -25,7 +25,7 @@ const factorial = n => {
     return n * factorial(n - 1)
 }
 
-const groupBy = (arr, item) => {
+const unionBy = (arr, item) => {
   return arr.reduce((a, c, i, instanceArr) => {
     if (!a.some(x => x[item] === c[item])) {
       a.push(c)
@@ -34,7 +34,7 @@ const groupBy = (arr, item) => {
   }, [])
 }
 
-const groupBySumAt = (arr, byKey, sumAt) => {
+const unionBySumAt = (arr, byKey, sumAt) => {
   return arr.reduce((a, c) => {
     if (!a.some(x => x[byKey] === c[byKey])) {
       a.push(c)
@@ -78,9 +78,9 @@ module.exports = {
   cumSum,
   duplicates,
   factorial,
-  groupBy,
-  groupBySumAt,
   isPrime,
+  unionBy,
+  unionBySumAt,
   uniq,
   sort
 }
