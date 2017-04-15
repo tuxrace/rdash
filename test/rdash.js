@@ -50,4 +50,10 @@ describe('rdash', function() {
     done();
   });
 
+  it('test duplicates() function', function(done){
+    var result = duplicates([1,8,2,1,7,5,2]);
+    expect(result).to.deep.equal([1,2,1,2]);
+    done();
+  });
+
 });
