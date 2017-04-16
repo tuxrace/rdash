@@ -1,4 +1,7 @@
 module.exports = {
-  entry: './index.js',
-  output: {filename: './dist/main.js'}
+  entry: {
+    './demo/app':'./index.js',
+    './dist/rdash':'./rdash.js',
+  },
+  output: {filename: '[name].js'},
 }
