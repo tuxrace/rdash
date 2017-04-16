@@ -1,5 +1,5 @@
-const { sort, duplicates, contains, uniq, groupBy, cumSum, 
-  groupBySumAt, factorial } = require('./rdash')
+const { sort, duplicates, contains, uniq, unionBy, cumSum, 
+  unionBySumAt, factorial } = require('./rdash')
 
 var items = [
   {key:'key1', value : 10},
@@ -9,6 +9,6 @@ var items = [
   {key:'key3', value : 10}
 ]
 
-var result = groupBySumAt(items,'key','value')
+var result = unionBySumAt(items,'key','value')
 
 console.log(result, factorial(4))
