@@ -3,23 +3,24 @@ The recreational lodash
 
 ## To install
 Run the npm install command first, it will install in your local machine all the required modules.    
-    
-    npm install    
+
+    npm install
 
 ## To build
 
     npm run build
+
 ## Run the Examples
 
 Next, you need to install a web server to serve our app. We suggest to use simplehttpserver.    
-    
+
     npm install simplehttpserver -g    
     simplehttpserver .
 
 ## To test
 
     npm test
-    
+
 All test should be 100% passed.    
 
 ## To use
@@ -76,3 +77,27 @@ All test should be 100% passed.
 
     Output:
     1,2,3,4,5
+
+## duplicates
+    const { duplicates } = require('./rdash')
+    const result = duplicates([1,8,2,1,7,5,2])
+    console.log(result)
+
+    Output:
+    [1,2,1,2]
+
+## factorial
+    const { factorial } = require('./rdash')
+    const result = factorial(3)
+    console.log(result)
+
+    Output:
+    6
+
+## isPrime
+    const { isPrime } = require('./rdash')
+    const result = isPrime(3)
+    console.log(result)
+
+    Output:
+    true

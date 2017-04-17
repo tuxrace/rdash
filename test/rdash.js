@@ -6,7 +6,8 @@ const { sort,
         groupBy,
         cumSum,
         unionBySumAt,
-        factorial
+        factorial,
+        isPrime
       } = require('../rdash');
 
 describe('rdash', function() {
@@ -55,5 +56,21 @@ describe('rdash', function() {
     expect(result).to.deep.equal([1,2,1,2]);
     done();
   });
+
+  it('test factorial() function', function(done) {
+    var ary = [];
+    for(i=1;i<5;i++){
+      ary.push(factorial(i));
+    }
+    expect(ary).to.deep.equal([1,2,6,24]);
+    done();
+  });
+
+  it('test isPrime() function', function(done) {
+    var result = isPrime(3)
+    expect(result).to.equal(true)
+    done();
+  });
+
 
 });
