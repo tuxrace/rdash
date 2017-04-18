@@ -9,7 +9,6 @@ var items = [
   {key:'key3', value : 10}
 ]
 
-
-var resultb = unionBySumAt(items,'key','value')
+var resultc = unionBySumAt(items,'key','value')
 
 console.log(result, factorial(4))
