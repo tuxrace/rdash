@@ -7,8 +7,6 @@ var items = [
   {key:'key2', value : 30},
   {key:'key1', value : 30},
   {key:'key3', value : 10}
-
-  
 ]
 
 var result = unionBySumAt(items,'key','value')
