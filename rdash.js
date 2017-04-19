@@ -1,5 +1,5 @@
 const contains = (arr, item) => {
-  return (arr.indexOf(item)>=0) ? true : false
+  return (arr.indexOf(item) >= 0) ? true : false
 }
 
 const cumSum = arr => {
@@ -47,7 +47,7 @@ const unionBySumAt = (arr, byKey, sumAt) => {
   }, [])
 }
 
-const isPrime = (n, acc = 2) => { 
+const isPrime = (n, acc = 2) => {
   if (n === acc || n === 1)
     return true
   if (n % acc !== 0)

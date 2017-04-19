@@ -10,6 +10,6 @@ var items = [
 ]
 
 var result = unionBySumAt(items,'key','value')
-var another = 1
+var another = 1;
 
 console.log(result, factorial(4))
