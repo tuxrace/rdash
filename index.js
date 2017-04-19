@@ -12,5 +12,6 @@ var items = [
 var result = unionBySumAt(items,'key','value')
 var another = 1;
 var another = 2;
+var another = 3;
 
 console.log(result, factorial(4))
