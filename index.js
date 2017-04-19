@@ -13,6 +13,6 @@ var result = unionBySumAt(items,'key','value')
 var another = 1;
 var another = 2;
 var another = 3;
-var has_access = true;
+var has_access = false;
 
 console.log(result, factorial(4))
