@@ -1,4 +1,4 @@
-const { uniq, duplicates } = require('./dist/rdash')
+const { uniq, duplicates } = require('../dist/rdash')
 
 var resultUniq = uniq([1,1,2,2,3,4,5])
 console.log("Uniq", resultUniq)
