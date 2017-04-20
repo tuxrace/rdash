@@ -1,7 +1,10 @@
 module.exports = {
   entry: {
-    './demo/app':'./index.js',
-    './dist/rdash':'./rdash.js',
+    './dist/rdash': './rdash.js',
   },
-  output: {filename: '[name].js'},
+  output: {
+    filename: '[name].js',
+    library: 'rdash',
+    libraryTarget: 'umd'
+  }
 }
