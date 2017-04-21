@@ -73,6 +73,30 @@ const uniq = arr => {
   return hashMap
 }
 
+const zip = (arr1,arr2) => {
+    let result = new Array();
+
+    let arr1_len = arr1.length;
+    let arr2_len = arr2.length;
+    let continue_index = 0;
+
+    for (var i = 0;i < arr1_len;i++) {
+        result.push(arr1[i]);
+        if (i < arr2_len) {
+            result.push(arr2[i]);
+            continue_index = i + 1;
+        }
+    }
+
+    if (arr2_len > arr1_len) {
+        for (var i = 0; i + continue_index < arr2_len;i++) {
+            result.push(arr2[continue_index + i]);
+        }
+    }
+
+    return result;
+}
+
 module.exports = {
   contains,
   cumSum,
@@ -82,5 +106,6 @@ module.exports = {
   unionBy,
   unionBySumAt,
   uniq,
-  sort
+  sort,
+  zip
 }
