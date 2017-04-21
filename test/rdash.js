@@ -59,7 +59,7 @@ describe('rdash', function() {
 
   it('test factorial() function', function(done) {
     var ary = [];
-    for(i=1;i<5;i++){
+    for(var i=1;i<5;i++){
       ary.push(factorial(i));
     }
     expect(ary).to.deep.equal([1,2,6,24]);
