@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "node node_modules/webpack/bin/webpack",
-    "test": "mocha"
+    "test": "mocha --compilers js:babel-core/register"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.24.1",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "webpack": "^2.4.1"
