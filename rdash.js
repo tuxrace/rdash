@@ -1,13 +1,10 @@
 const contains = (arr, item) => {
-  return (arr.indexOf(item) >= 0) ? true : false
+  return (arr.indexOf(item) >= 0)
 }
 
 const cumSum = arr => {
   return arr.reduce((a, c, i, instanceArr) => {
-    if (a.length > 0)
-      a.push(c + a[a.length - 1])
-    else
-      a.push(c)
+    if (a.length > 0) { a.push(c + a[a.length - 1]) } else { a.push(c) }
     return a
   }, [])
 }
@@ -19,10 +16,7 @@ const duplicates = arr => {
 }
 
 const factorial = n => {
-  if (n === 1)
-    return n
-  else
-    return n * factorial(n - 1)
+  if (n === 1) { return n } else { return n * factorial(n - 1) }
 }
 
 const unionBy = (arr, item) => {
@@ -48,27 +42,19 @@ const unionBySumAt = (arr, byKey, sumAt) => {
 }
 
 const isPrime = (n, acc = 2) => {
-  if (n === acc || n === 1)
-    return true
-  if (n % acc !== 0)
-    return isPrime(n, acc + 1)
-  else
-    return false
+  if (n === acc || n === 1) { return true }
+  if (n % acc !== 0) { return isPrime(n, acc + 1) } else { return false }
 }
 
 const sort = arr => {
-  const isString = arr.every(x => (typeof x) == "string")
-  if (isString)
-    return arr.sort()
-  else
-    return arr.sort((a, b) => a - b)
+  const isString = arr.every(x => (typeof x) === 'string')
+  if (isString) { return arr.sort() } else { return arr.sort((a, b) => a - b) }
 }
 
 const uniq = arr => {
   const hashMap = []
   arr.forEach(x => {
-    if (!hashMap.some(y => y === x))
-      hashMap.push(x)
+    if (!hashMap.some(y => y === x)) { hashMap.push(x) }
   })
   return hashMap
 }
