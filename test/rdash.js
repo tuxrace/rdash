@@ -7,7 +7,8 @@ const { sort,
         cumSum,
         unionBySumAt,
         factorial,
-        isPrime
+        isPrime,
+        zip
       } = require('../rdash');
 
 describe('rdash', function() {
@@ -72,5 +73,18 @@ describe('rdash', function() {
     done();
   });
 
+  it('test zip() function', function(done) {
+    var result = zip([1,2,3],[3,2,1]);
+    expect(result).to.deep.equal([1,3,2,2,3,1]);
+    result = zip([1,2,3],[3,2]);
+    expect(result).to.deep.equal([1,3,2,2,3]);
+    result = zip([1,2],[3,2,1]);
+    expect(result).to.deep.equal([1,3,2,2,1]);
+    result = zip([],[2]);
+    expect(result).to.deep.equal([2]);
+    result = zip([2],[]);
+    expect(result).to.deep.equal([2]);
+    done();
+  });
 
 });
