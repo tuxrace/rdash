@@ -60,24 +60,24 @@ const uniq = arr => {
 }
 
 const zip = (arr1, arr2) => {
-  let result = new Array()
-    let arr1_len = arr1.length
-    let arr2_len = arr2.length
-    let continue_index = 0
+  let result = []
+  let arr1Len = arr1.length
+  let arr2Len = arr2.length
+  let continueIndex = 0
 
-    for (var i = 0; i < arr1_len; i++) {
-      result.push(arr1[i])
-        if (i < arr2_len) {
-          result.push(arr2[i])
-            continue_index = i + 1
-        }
+  for (var i = 0; i < arr1Len; i++) {
+    result.push(arr1[i])
+    if (i < arr2Len) {
+      result.push(arr2[i])
+      continueIndex = i + 1
     }
+  }
 
-  if (arr2_len > arr1_len) {
-      for (var i = 0; i + continue_index < arr2_len; i++) {
-          result.push(arr2[continue_index + i])
-        }
+  if (arr2Len > arr1Len) {
+    for (var j = 0; j + continueIndex < arr2Len; j++) {
+      result.push(arr2[continueIndex + j])
     }
+  }
 
   return result
 }
