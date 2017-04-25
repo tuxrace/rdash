@@ -7,8 +7,9 @@ const { sort,
         unionBySumAt,
         factorial,
         isPrime,
-        zip
-      } = require('../rdash');
+        zip,
+        unionBy
+      } = require('../rdash')
 
 describe('rdash', function () {
   it('test uniq() function', function (done) {
@@ -69,21 +70,33 @@ describe('rdash', function () {
   it('test isPrime() function', function (done) {
     var result = isPrime(3)
     expect(result).to.equal(true)
-    done();
-  });
+    done()
+  })
 
-  it('test zip() function', function(done) {
-    var result = zip([1,2,3],[3,2,1]);
-    expect(result).to.deep.equal([1,3,2,2,3,1]);
-    result = zip([1,2,3],[3,2]);
-    expect(result).to.deep.equal([1,3,2,2,3]);
-    result = zip([1,2],[3,2,1]);
-    expect(result).to.deep.equal([1,3,2,2,1]);
-    result = zip([],[2]);
-    expect(result).to.deep.equal([2]);
-    result = zip([2],[]);
-    expect(result).to.deep.equal([2]);
-    done();
-  });
+  it('test zip() function', function (done) {
+    var result = zip([1, 2, 3], [3, 2, 1])
+    expect(result).to.deep.equal([1, 3, 2, 2, 3, 1])
+    result = zip([1, 2, 3], [3, 2])
+    expect(result).to.deep.equal([1, 3, 2, 2, 3])
+    result = zip([1, 2], [3, 2, 1])
+    expect(result).to.deep.equal([1, 3, 2, 2, 1])
+    result = zip([], [2])
+    expect(result).to.deep.equal([2])
+    result = zip([2], [])
+    expect(result).to.deep.equal([2])
+    done()
+  })
 
-});
+  it('test unionBy() function', function (done) {
+    var item1 = [
+      {key: 'key1', value: 10},
+      {key: 'key2', value: 20},
+      {key: 'key2', value: 30},
+      {key: 'key1', value: 40}
+    ]
+    var result = unionBy(item1, 'key')
+    var data = [{key: 'key1', value: 10}, {key: 'key2', value: 20}]
+    expect(result).to.deep.equal(data)
+    done()
+  })
+})
