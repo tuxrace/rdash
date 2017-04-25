@@ -7,7 +7,8 @@ const { sort,
         unionBySumAt,
         factorial,
         isPrime,
-        zip
+        zip,
+        unionBy
       } = require('../rdash')
 
 describe('rdash', function () {
@@ -83,6 +84,19 @@ describe('rdash', function () {
     expect(result).to.deep.equal([2])
     result = zip([2], [])
     expect(result).to.deep.equal([2])
+    done()
+  })
+
+  it('test unionBy() function', function (done) {
+    var item1 = [
+      {key: 'key1', value: 10},
+      {key: 'key2', value: 20},
+      {key: 'key2', value: 30},
+      {key: 'key1', value: 40}
+    ]
+    var result = unionBy(item1, 'key')
+    var data = [{key: 'key1', value: 10}, {key: 'key2', value: 20}]
+    expect(result).to.deep.equal(data)
     done()
   })
 })
