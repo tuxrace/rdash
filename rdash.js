@@ -83,7 +83,7 @@ const zip = (arr1, arr2) => {
 }
 
 // First version of String to JSON converter
-const strToJson1 = (str) => {
+const csvToJson = (str) => {
   let result = str.split(",").reduce((a, c) => {
     row = c.split(":")
     a[row[0]] = row[1].trim()
@@ -93,7 +93,7 @@ const strToJson1 = (str) => {
 }
 
 // another version of string to JSON converter
-const strToJson2 = (str) => {
+const csvToJson2 = (str) => {
 
 }
 
@@ -108,5 +108,5 @@ module.exports = {
   uniq,
   sort,
   zip,
-  strToJson1
+  csvToJson
 }
