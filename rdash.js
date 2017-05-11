@@ -82,6 +82,21 @@ const zip = (arr1, arr2) => {
   return result
 }
 
+// First version of String to JSON converter
+const csvToJson = (str) => {
+  let result = str.split(",").reduce((a, c) => {
+    row = c.split(":")
+    a[row[0]] = row[1].trim()
+    return a
+  }, {})
+  return JSON.stringify(result)
+}
+
+// another version of string to JSON converter
+const csvToJson2 = (str) => {
+
+}
+
 module.exports = {
   contains,
   cumSum,
@@ -92,5 +107,6 @@ module.exports = {
   unionBySumAt,
   uniq,
   sort,
-  zip
+  zip,
+  csvToJson
 }
