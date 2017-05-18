@@ -92,9 +92,8 @@ const csvToJson = (str) => {
   return JSON.stringify(result)
 }
 
-// another version of string to JSON converter
-const csvToJson2 = (str) => {
-
+const objectToQueryString = obj => {
+  return Object.keys(obj).map(x => x + '=' + obj[x]).join("&").toString()
 }
 
 module.exports = {
@@ -108,5 +107,6 @@ module.exports = {
   uniq,
   sort,
   zip,
-  csvToJson
+  csvToJson,
+  objectToQueryString
 }
