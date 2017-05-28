@@ -1,0 +1,20 @@
+language: node_js
+node_js: stable
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get -qq update
+  - sudo apt-get -qq install g++-4.8
+env:
+  - CXX=g++-4.8
+notifications:
+  slack: pragmaticprogrammers:vPa5atxnsbHS6dTEuAAsnSxy
+deploy:
+  provider: cloudfoundry
+  api: https://api.ng.bluemix.net
+  username: sudogem@gmail.com
+  password:
+    secure: hLevKZevcv5RUXgj6oBKzY4goObujlNhOAOuoQQmAdczhC8HvxP0Nd9LqOFMdLg/DzZtV4e6PFk8qvieiZItdLSilKUIz9LrPXW5Aj+ntwQcG5sFnWIicaJyNpxbUv7he3TIA0yYh73fAq6VyAsIhAJ4Hkd925uyvQqwvUmjT+y/3MMl6RN6h+2NQNa0bHBTDS1+ueivdRsjY+JirGXdJmRiw9w7j6ijwzbuXiwxAIO6DZ75KQ1N3T20/3U/6a3g4W+OLYyeydZN5Kexduy4IZ2EhPtffdA3NcDuEg5jbE67K9aQV9Q+oHpJBtHcJtTEfwIRJW/haOXTD5UzgOXNu/qFa8V3hWHELyttUUb/Twh2KhGuALt1USRYs4MycSjNDmUi6AZPVsFp993ht9pPtY0N0EzlPZqScLeDFJTbx+vUQdI0y+TqqTLmtjdm+SYI0XD/0P6SoBO0+x63HMBcoNgfME+f2m59PrJ9iEQIWnTUbA3YZDHzwJKslGV10oXdYYGh/MQvL2yqMoKGFt58gk3ygAdmhMiGUmvX6VTYdz1sV9CFo1hIJahJEQO5FnjrAkMVvjF3mah7ffhRibZ2D11l2IiBuaeCAUfGKAZaTv9XHevns1MPk5IDFqs7vndYUAtNtY/g8HdGNjdfxmaMvNpbRpgQ3XZS6S8vx6fhkkQ=
+  organization: sudogem
+  space: node_space
+  on:
+    repo: sudogem/rdash
