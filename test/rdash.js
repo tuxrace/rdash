@@ -8,7 +8,8 @@ const { sort,
         factorial,
         isPrime,
         zip,
-        unionBy
+        unionBy,
+        csvToJson
       } = require('../rdash')
 
 describe('rdash', function () {
@@ -97,6 +98,14 @@ describe('rdash', function () {
     var result = unionBy(item1, 'key')
     var data = [{key: 'key1', value: 10}, {key: 'key2', value: 20}]
     expect(result).to.deep.equal(data)
+    done()
+  })
+
+  it('test csvToJson() function', function (done) {
+    var str = "position:Java dev,salary:120000\n"
+    var result = csvToJson(str)
+    expect(result).to.be.a('string')
+    expect(result).to.have.lengthOf(41)
     done()
   })
 })

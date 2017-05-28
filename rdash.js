@@ -85,7 +85,7 @@ const zip = (arr1, arr2) => {
 // First version of String to JSON converter
 const csvToJson = (str) => {
   let result = str.split(",").reduce((a, c) => {
-    row = c.split(":")
+    const row = c.split(":")
     a[row[0]] = row[1].trim()
     return a
   }, {})
