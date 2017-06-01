@@ -1,4 +1,4 @@
-const { uniq, duplicates, contains, csvToJson } = require('../dist/rdash')
+const { uniq, duplicates, contains, csvToJson, objectToQueryString } = require('../dist/rdash')
 
 var resultUniq = uniq([1, 1, 2, 2, 3, 4, 5])
 console.log('Uniq', resultUniq)
@@ -11,3 +11,6 @@ console.log('Contains', resultContains)
 
 var resultcsvToJson = csvToJson("firstname: Arman, lastname: Ortega, age: 25")
 console.log('csvToJson', resultcsvToJson)
+
+var resultobjectToQueryString = objectToQueryString({"firstname": "Arman", "lastname": "Ortega", "age": "25"})
+console.log('objectToQueryString', resultobjectToQueryString)
