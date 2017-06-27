@@ -9,7 +9,8 @@ const { sort,
         isPrime,
         zip,
         unionBy,
-        csvToJson
+        csvToJson,
+        avg
       } = require('../rdash')
 
 describe('rdash', function () {
@@ -102,10 +103,17 @@ describe('rdash', function () {
   })
 
   it('test csvToJson() function', function (done) {
-    var str = "position:Java dev,salary:120000\n"
+    var str = 'position:Java dev,salary:120000\n'
     var result = csvToJson(str)
     expect(result).to.be.a('string')
     expect(result).to.have.lengthOf(41)
+    done()
+  })
+
+  it('test average function', function (done) {
+    var result = avg([5, 10, 15, 20, 25])
+    expect(result).to.be.a('number')
+    expect(result).to.equal(15)
     done()
   })
 })

@@ -1,3 +1,9 @@
+const avg = (arr) => {
+  return arr.reduce((total, amount, idx, instanceArr) => {
+    return total + amount / arr.length
+  }, 0)
+}
+
 const contains = (arr, item) => {
   return (arr.indexOf(item) >= 0)
 }
@@ -108,5 +114,6 @@ module.exports = {
   sort,
   zip,
   csvToJson,
-  objectToQueryString
+  objectToQueryString,
+  avg
 }
