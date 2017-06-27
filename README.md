@@ -101,3 +101,11 @@ All test should be 100% passed.
 
     Output:
     true
+
+## avg
+    const { avg } = require('./rdash')
+    const result = avg([5, 10, 15, 20, 25])
+    console.log(result)
+
+    Output:
+    15
