@@ -61,11 +61,8 @@ describe('rdash', function () {
   })
 
   it('test factorial() function', function (done) {
-    var ary = []
-    for (var i = 1; i < 5; i++) {
-      ary.push(factorial(i))
-    }
-    expect(ary).to.deep.equal([1, 2, 6, 24])
+    var result = factorial(10)
+    expect(result).to.equal(3628800)
     done()
   })
 
