@@ -1,5 +1,6 @@
 # rdash
 The recreational lodash
+
 ![](https://travis-ci.org/tuxrace/rdash.svg?branch=master)
 
 ## To install
