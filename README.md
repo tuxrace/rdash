@@ -1,6 +1,8 @@
 # rdash
 The recreational lodash
 
+ ![](https://travis-ci.org/tuxrace/rdash.svg?branch=master)
+
 ## To install
 Run the npm install command first, it will install in your local machine all the required modules.    
 
