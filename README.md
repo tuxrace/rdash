@@ -86,7 +86,7 @@ All test should be 100% passed.
     Output:
     [1,2,1,2]
 
-## factorial
+## factorial(number)
     const { factorial } = require('./rdash')
     const result = factorial(3)
     console.log(result)
