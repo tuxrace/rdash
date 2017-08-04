@@ -6,8 +6,12 @@
   "scripts": {
     "build": "node node_modules/webpack/bin/webpack",
     "test": "mocha --compilers js:babel-core/register",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "./node_modules/.bin/eslint ./rdash.js"
   },
+  "pre-commit":[
+    "lint"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,5 +27,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.2.0",
     "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "pre-commit": "^1.2.2"
   }
 }
