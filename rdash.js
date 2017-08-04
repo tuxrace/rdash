@@ -104,7 +104,7 @@ const csvToJson = (str) => {
 
 const objectToQueryString = obj => {
   return Object.keys(obj).map(x => x + '=' + obj[x]).join("&").toString()
-}
+};
 
 module.exports = {
   contains,
