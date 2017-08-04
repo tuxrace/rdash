@@ -22,10 +22,10 @@ const duplicates = arr => {
 }
 
 const factorial = n => {
-  if (n === 1) { 
-    return n 
-  } else { 
-    return n * factorial(n - 1) 
+  if (n === 1) {
+    return n
+  } else {
+    return n * factorial(n - 1)
   }
 }
 
@@ -94,8 +94,8 @@ const zip = (arr1, arr2) => {
 
 // First version of String to JSON converter
 const csvToJson = (str) => {
-  let result = str.split(",").reduce((a, c) => {
-    const row = c.split(":")
+  let result = str.split(',').reduce((a, c) => {
+    const row = c.split(':')
     a[row[0]] = row[1].trim()
     return a
   }, {})
@@ -103,8 +103,8 @@ const csvToJson = (str) => {
 }
 
 const objectToQueryString = obj => {
-  return Object.keys(obj).map(x => x + '=' + obj[x]).join("&").toString()
-};
+  return Object.keys(obj).map(x => x + '=' + obj[x]).join('&').toString()
+}
 
 module.exports = {
   contains,
