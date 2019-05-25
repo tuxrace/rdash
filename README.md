@@ -111,3 +111,10 @@ All test should be 100% passed.
 
     Output:
     15
+
+## isPalindrome
+    const { isPalindrome } = require('./rdash')
+    console.log(isPalindrome('madam'))
+
+    Output:
+    true

@@ -106,6 +106,10 @@ const objectToQueryString = obj => {
   return Object.keys(obj).map(x => x + '=' + obj[x]).join('&').toString()
 }
 
+const isPalindrome = str => {
+  return str === str.split('').reverse().join('')
+}
+
 module.exports = {
   contains,
   cumSum,
@@ -119,5 +123,6 @@ module.exports = {
   zip,
   csvToJson,
   objectToQueryString,
-  avg
+  avg,
+  isPalindrome
 }

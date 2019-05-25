@@ -1,5 +1,5 @@
 const { sort, duplicates, contains, uniq, unionBy, cumSum, 
-  unionBySumAt, factorial } = require('./rdash')
+  unionBySumAt, isPalindrome } = require('./rdash')
 
 var items = [
   {key: 'key1', value: 10},
@@ -11,4 +11,4 @@ var items = [
 
 var result = unionBySumAt(items, 'key', 'value')
 
-console.log(result, factorial(4))
+console.log(result, isPalindrome('molly'))
