@@ -62,11 +62,7 @@ const sort = arr => {
 }
 
 const uniq = arr => {
-  const hashMap = []
-  arr.forEach(x => {
-    if (!hashMap.some(y => y === x)) { hashMap.push(x) }
-  })
-  return hashMap
+  return [...new Set(arr)]
 }
 
 const zip = (arr1, arr2) => {

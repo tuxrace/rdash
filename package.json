@@ -9,7 +9,7 @@
     "start": "node index.js",
     "lint": "./node_modules/.bin/eslint ./rdash.js"
   },
-  "pre-commit":[
+  "pre-commit": [
     "lint"
   ],
   "keywords": [],
