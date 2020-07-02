@@ -107,7 +107,7 @@ describe('rdash', function () {
     done()
   })
 
-  it('test average function', function (done) {
+  it('test average() function', function (done) {
     var result = avg([5, 10, 15, 20, 25])
     expect(result).to.be.a('number')
     expect(result).to.equal(15)
