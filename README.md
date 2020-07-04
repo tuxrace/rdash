@@ -1,7 +1,7 @@
 # rdash
 The recreational lodash
 
- ![](https://github.com/tuxrace/rdash/workflows/<WORKFLOW_NAME>/badge.svg)
+ ![](https://github.com/tuxrace/rdash/workflows/rdash-ci/badge.svg)
 
 ## Contribute
 Commit to develop and make a pull request to master.
