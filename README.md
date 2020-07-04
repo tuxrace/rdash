@@ -1,7 +1,10 @@
 # rdash
 The recreational lodash
 
- ![](https://travis-ci.org/tuxrace/rdash.svg?branch=master)
+ ![](https://github.com/tuxrace/rdash/workflows/<WORKFLOW_NAME>/badge.svg)
+
+## Contribute
+Commit to develop and make a pull request to master.
 
 ## To install
 Run the npm install command first, it will install in your local machine all the required modules.    
