@@ -1,4 +1,4 @@
-name: CI
+name: rdash-ci
 on:
   push:
     branches: [ master ]
