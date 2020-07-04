@@ -3,6 +3,9 @@ The recreational lodash
 
  ![](https://travis-ci.org/tuxrace/rdash.svg?branch=master)
 
+## Contribute
+Commit to develop and make a pull request to master.
+
 ## To install
 Run the npm install command first, it will install in your local machine all the required modules.    
 
