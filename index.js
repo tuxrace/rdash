@@ -11,4 +11,4 @@ var items = [
 
 var result = unionBySumAt(items, 'key', 'value');
 
-console.log(result, isPalindrome('molly'))
+console.log(result, isPalindrome('molly'));
