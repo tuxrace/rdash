@@ -121,3 +121,5 @@ All test should be 100% passed.
 
     Output:
     true
+
+## debounce
