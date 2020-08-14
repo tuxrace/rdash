@@ -99,7 +99,7 @@ All test should be 100% passed.
     Output:
     6
 
-## isPrime
+## isPrime(number)
     const { isPrime } = require('./rdash')
     const result = isPrime(3)
     console.log(result)
@@ -107,7 +107,7 @@ All test should be 100% passed.
     Output:
     true
 
-## avg
+## avg([number])
     const { avg } = require('./rdash')
     const result = avg([5, 10, 15, 20, 25])
     console.log(result)
@@ -115,11 +115,11 @@ All test should be 100% passed.
     Output:
     15
 
-## isPalindrome
+## isPalindrome(string)
     const { isPalindrome } = require('./rdash')
     console.log(isPalindrome('madam'))
 
     Output:
     true
 
-## debounce
+## debounce(function)
