@@ -16,9 +16,9 @@ const cumSum = arr => {
 }
 
 const duplicates = arr => {
-  return arr.filter((x, i, instanceArr) => {
-    return instanceArr.filter(y => x === y).length > 1
-  })
+  return arr.reduce((acc, curVal, curIdx, srcArr) => (
+    (acc.indexOf(curVal) === -1 && srcArr.indexOf(curVal) !== curIdx) ? [...acc, curVal] : [...acc]
+  ), []);
 }
 
 const factorial = n => {
