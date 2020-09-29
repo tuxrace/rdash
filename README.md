@@ -3,8 +3,9 @@
 
  ![](https://github.com/tuxrace/rdash/workflows/rdash-ci/badge.svg)
 
-## Contribute
-Commit to develop and make a pull request to master.
+## Contribute Guide
+1. Fork from develop branch.
+2. Make a PR to develop branch.
 
 ## To install
 Run the npm install command first, it will install in your local machine all the required modules.    
