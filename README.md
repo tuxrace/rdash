@@ -1,5 +1,5 @@
 # 👟 rdash
-> The recreational lodash
+> The recreational lodash.
 
  ![](https://github.com/tuxrace/rdash/workflows/rdash-ci/badge.svg)
 
