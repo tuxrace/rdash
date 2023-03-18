@@ -1,14 +1,13 @@
-const { sort, duplicates, contains, uniq, unionBy, cumSum, 
-  unionBySumAt, isPalindrome } = require('./rdash');
+const { unionBySumAt, isPalindrome } = require('./rdash')
 
 var items = [
-  {key: 'key1', value: 10},
-  {key: 'key2', value: 20},
-  {key: 'key2', value: 30},
-  {key: 'key1', value: 30},
-  {key: 'key3', value: 10}
-];
+  { key: 'key1', value: 10 },
+  { key: 'key2', value: 20 },
+  { key: 'key2', value: 30 },
+  { key: 'key1', value: 30 },
+  { key: 'key3', value: 10 }
+]
 
-var result = unionBySumAt(items, 'key', 'value');
+var result = unionBySumAt(items, 'key', 'value')
 
-console.log(result, isPalindrome('molly'));
+console.log(result, isPalindrome('molly'))
