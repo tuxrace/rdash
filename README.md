@@ -1,7 +1,7 @@
 # 👟 rdash
 > The recreational lodash.
 
- ![](https://github.com/tuxrace/rdash/workflows/rdash-ci/badge.svg)
+[![rdash-ci](https://github.com/tuxrace/rdash/actions/workflows/main.yml/badge.svg)](https://github.com/tuxrace/rdash/actions/workflows/main.yml)
 
 ## Contribute Guide
 1. Fork from develop branch.
