@@ -14,7 +14,7 @@ Run the npm install command first, it will install in your local machine all the
 
 ## To build
 
-    npm run build
+    npm run build.
 
 ## Run the Examples
 
