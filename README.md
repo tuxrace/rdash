@@ -1,5 +1,5 @@
 # 👟 rdash
-> The recreational clone of lodash.
+> The recreational javascript utilities.
 
 [![rdash-ci](https://github.com/tuxrace/rdash/actions/workflows/main.yml/badge.svg)](https://github.com/tuxrace/rdash/actions/workflows/main.yml)
 
